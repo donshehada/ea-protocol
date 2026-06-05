@@ -5,40 +5,40 @@
 <title>EA Protocol Tracker</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Courier New,monospace;background:#0c0f14;color:#b8c4d4;min-height:100vh}
-.hdr{background:linear-gradient(160deg,#0e1219,#151d2b,#0e1a24);border-bottom:1px solid #1e2838;padding:18px 16px}
+body{font-family:Courier New,monospace;background:#0c0f14;color:#b8c4d4;min-height:100vh;font-size:14px}
+.hdr{background:linear-gradient(160deg,#0e1219,#151d2b,#0e1a24);border-bottom:1px solid #1e2838;padding:20px 16px}
 .mx{max-width:1100px;margin:0 auto}
-h1{font-size:18px;font-weight:700;color:#e8ecf0}
-.lbl{font-size:9px;color:#5a6a80;display:block;margin-bottom:3px;text-transform:uppercase;letter-spacing:1.2px}
-input[type=date]{font-family:monospace;background:#141820;border:1px solid #2a3a52;color:#4fd1c5;padding:8px 12px;border-radius:8px;font-size:13px}
-select{font-family:monospace;background:#141820;border:1px solid #2a3a52;color:#4fd1c5;padding:8px 12px;border-radius:8px;font-size:12px}
-input[type=text],input[type=number]{font-family:monospace;background:#141820;border:1px solid #1e2838;color:#b8c4d4;padding:5px 8px;border-radius:4px;font-size:11px}
+h1{font-size:22px;font-weight:700;color:#e8ecf0}
+.lbl{font-size:11px;color:#5a6a80;display:block;margin-bottom:4px;text-transform:uppercase;letter-spacing:1.2px}
+input[type=date]{font-family:monospace;background:#141820;border:1px solid #2a3a52;color:#4fd1c5;padding:10px 14px;border-radius:8px;font-size:15px}
+select{font-family:monospace;background:#141820;border:1px solid #2a3a52;color:#4fd1c5;padding:10px 14px;border-radius:8px;font-size:14px}
+input[type=text],input[type=number]{font-family:monospace;background:#141820;border:1px solid #1e2838;color:#b8c4d4;padding:7px 10px;border-radius:4px;font-size:14px}
 input:focus{outline:none;border-color:#4fd1c5}
 .tabs{display:flex;border-bottom:1px solid #1a2232;overflow-x:auto}
-.tab{background:none;border:none;padding:11px 12px;font-size:11px;font-family:monospace;color:#5a6a80;cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap}
+.tab{background:none;border:none;padding:13px 14px;font-size:13px;font-family:monospace;color:#5a6a80;cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap}
 .tab.on{color:#4fd1c5;border-bottom-color:#4fd1c5;font-weight:500}
 .tog{display:inline-flex;background:#0e1219;border-radius:10px;padding:3px;border:1px solid #1e2838;gap:2px}
-.tog button{padding:8px 14px;border-radius:8px;border:none;cursor:pointer;font-size:11px;font-family:monospace;white-space:nowrap;background:transparent;color:#5a6a80}
+.tog button{padding:10px 16px;border-radius:8px;border:none;cursor:pointer;font-size:13px;font-family:monospace;white-space:nowrap;background:transparent;color:#5a6a80}
 .tog button.ac{background:#1a2e42;color:#63b3ed;font-weight:600}
 .tog button.ar{background:#0e2e2b;color:#4fd1c5;font-weight:600}
-.card{background:#141820;border:1px solid #1a2232;border-radius:8px;padding:8px 10px}
-table{width:100%;border-collapse:collapse;font-size:11px}
-th{background:#141820;color:#4fd1c5;padding:9px 5px;border-bottom:2px solid #1e2838;text-align:center;font-size:9px;text-transform:uppercase;white-space:nowrap;position:sticky;top:0;z-index:2}
-td{padding:5px 3px;text-align:center;border-bottom:1px solid rgba(26,34,50,0.07)}
-.db{border-radius:6px;padding:5px 4px;cursor:pointer;font-size:9px;font-family:monospace;width:100%;text-align:center;border:1px solid #2a3a52;background:#1a2232;color:#8090a4}
+.card{background:#141820;border:1px solid #1a2232;border-radius:8px;padding:10px 12px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{background:#141820;color:#4fd1c5;padding:10px 6px;border-bottom:2px solid #1e2838;text-align:center;font-size:11px;text-transform:uppercase;white-space:nowrap;position:sticky;top:0;z-index:2}
+td{padding:7px 4px;text-align:center;border-bottom:1px solid rgba(26,34,50,0.07)}
+.db{border-radius:6px;padding:7px 6px;cursor:pointer;font-size:12px;font-family:monospace;width:100%;text-align:center;border:1px solid #2a3a52;background:#1a2232;color:#8090a4}
 .db.ck{background:#0e332e;border-color:#4fd1c5;color:#4fd1c5}
-.trb{border-radius:6px;padding:5px 8px;cursor:pointer;font-size:10px;font-family:monospace;border:1px solid #2a3a52;background:#1a2232;color:#5a6a80}
+.trb{border-radius:6px;padding:7px 10px;cursor:pointer;font-size:13px;font-family:monospace;border:1px solid #2a3a52;background:#1a2232;color:#5a6a80}
 .trb.on{background:#1a2e3e;border-color:#63b3ed;color:#63b3ed}
-.warn{background:#1a0e0e;border:1px solid #5a2020;border-radius:8px;padding:14px;margin-top:18px}
-.info{background:#141820;border:1px solid #1a2232;border-radius:8px;padding:14px;margin-top:14px}
+.warn{background:#1a0e0e;border:1px solid #5a2020;border-radius:8px;padding:16px;margin-top:18px}
+.info{background:#141820;border:1px solid #1a2232;border-radius:8px;padding:16px;margin-top:14px}
 .fh{color:#fc8181;font-weight:500}.fl{color:#ecc94b;font-weight:500}.fo{color:#68d8ce}
-.gk{border-radius:10px;padding:14px;margin-bottom:10px;border-left:3px solid}
+.gk{border-radius:10px;padding:16px;margin-bottom:12px;border-left:3px solid}
 .gk-k,.gk-a{background:#0e2e2b;border-left-color:#4fd1c5}
 .gk-r{background:#1a0e0e;border-left-color:#fc8181}
 .gk-n{background:#1a1a0e;border-left-color:#ecc94b}
-.bg{font-size:9px;padding:2px 8px;border-radius:4px;font-weight:600;text-transform:uppercase;letter-spacing:1px}
-.bb{width:100%;height:6px;background:#1a2232;border-radius:3px;overflow:hidden}
-.bf{height:100%;border-radius:3px;transition:width 0.5s ease}
+.bg{font-size:11px;padding:3px 10px;border-radius:4px;font-weight:600;text-transform:uppercase;letter-spacing:1px}
+.bb{width:100%;height:8px;background:#1a2232;border-radius:4px;overflow:hidden}
+.bf{height:100%;border-radius:4px;transition:width 0.5s ease}
 </style>
 </head>
 <body>
